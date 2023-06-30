@@ -1,0 +1,29 @@
+|rmInit
+|rmTitle
+|rmMenu
+|rmOptions
++Game
+	|rmDifficulty
+	|rm1
+	|rm2
+	|rm3
+	|rm4
+	|rm5
+	|rm6
+	|rm7
+	|rm8
+	|rm9
+	|rm10
+	|rm11
+	|rm12
+	|rm13
+	|rm14
+	|rm15
+	|rm16
+	|rm17
+	|rm18
+	|rm19
+	|rm20
+	|rmTemplate
++Tools
+	|rmCreateSoundPackTool
