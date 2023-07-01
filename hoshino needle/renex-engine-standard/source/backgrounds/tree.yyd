@@ -20,8 +20,10 @@
 +autotiler
 	|bgMarkMazes32
 	|bgMarkMazes16
+	|background49
 	|bgBrownBlock32
 	|bgGuyPipes32
+	|background47
 	|bgFunnySlopeFill
 	|bgFunnySlopeTop
 	|bgFreeformRedblock
@@ -42,4 +44,6 @@
 |background41_block
 |background42_block
 |background43_bg
+|background46
 |background44
+|background45

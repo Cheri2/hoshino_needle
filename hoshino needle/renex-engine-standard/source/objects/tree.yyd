@@ -412,14 +412,16 @@
 	|FruitTrap
 +Shaders
 	|DepthHueShift
-	|DepthTint
 	|DepthRainbow
+	|DepthTint
 	|DepthCloud
+	|object420
 	|DepthShaderReset
-	+Lighting Engine
-		|LightingCtrl
-		|Light
-		|ShadowVolume
+	|invertedblock
++Lighting Engine
+	|LightingCtrl
+	|Light
+	|ShadowVolume
 |PlayerStart
 |Block
 |Platform

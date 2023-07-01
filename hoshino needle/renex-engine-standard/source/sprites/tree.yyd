@@ -161,6 +161,10 @@
 	|sprSpikeLeft
 	|sprSpikeRight
 	|sprSpikeUp
+	|sprite392
+	|sprite393
+	|sprite394
+	|sprite395
 	|sprSpikeTrap
 	|sprSpikeLeftTrap
 	|sprSpikeRightTrap
@@ -399,4 +403,7 @@
 |sprite387_spikeup
 |sprite388_walljumpL
 |sprite389_walljumpR
+|sprite396
+|sprite397
 |sprite390_platform
+|sprite391
