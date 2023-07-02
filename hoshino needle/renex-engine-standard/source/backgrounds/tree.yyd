@@ -22,6 +22,7 @@
 	|bgMarkMazes16
 	|background49
 	|bgBrownBlock32
+	|background52
 	|bgGuyPipes32
 	|background47
 	|bgFunnySlopeFill
@@ -49,3 +50,6 @@
 |background45
 |background50_bg
 |background51_block
+|background53_block_alt
+|background54_bg
+|background55_block

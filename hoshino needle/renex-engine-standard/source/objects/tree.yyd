@@ -421,6 +421,7 @@
 +Lighting Engine
 	|LightingCtrl
 	|Light
+	|object422
 	|ShadowVolume
 |PlayerStart
 |Block
