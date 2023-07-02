@@ -28,6 +28,9 @@
 	|rm22
 	|rm23
 	|rm24
+	|rm25
+	|rm26
+	|rm27
 	|rmTemplate
 +Tools
 	|rmCreateSoundPackTool
