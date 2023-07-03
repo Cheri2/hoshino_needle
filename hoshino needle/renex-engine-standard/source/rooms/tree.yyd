@@ -32,6 +32,8 @@
 	|rm26
 	|rm27
 	|rm28
+	|rm29
+	|rm30
 	|rmTemplate
 +Tools
 	|rmCreateSoundPackTool

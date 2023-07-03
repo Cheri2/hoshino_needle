@@ -17,6 +17,7 @@ lib_id=1
 action_id=603
 applies_to=self
 */
+if(settings("potato")!=0) exit;
 //ps-light uniforms
 var w,h,surf1,surf2;
 
@@ -109,6 +110,7 @@ lib_id=1
 action_id=603
 applies_to=self
 */
+if(settings("potato")!=0) exit;
 draw_set_blend_mode(bm_subtract)
 draw_surface(surface_get("lighting2",global.width,global.height),view_xview,view_yview)
 draw_set_blend_mode(0)
