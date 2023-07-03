@@ -73,8 +73,10 @@
 	|sprKumo
 	|sprWallJUmpLEditor
 	|sprWallJumpL
+	|sprite408
 	|sprWallJumpREditor
 	|sprWallJumpR
+	|sprite407
 	|sprCautionLEditor
 	|sprCautionL
 	|sprCautionREditor
