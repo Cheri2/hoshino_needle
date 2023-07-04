@@ -77,7 +77,7 @@ if (argument0=="draw") {
     if (bow) {
         dy=floor(bowy+abs(lengthdir_y(2,drawangle))*vflip+(vflip==-1))
         if ((drawspr=sprPlayerIdle || drawspr=sprPlayerIdleOld) && floor(drawframe)==3) dy+=vflip //bobbing
-        draw_sprite_ext(sprBow,0,floor(bowx),dy,xs,ys,drawangle,image_blend,image_alpha)
+        draw_sprite_ext(sprBow,clamp(-(djump-maxjumps)*3,0,3),floor(bowx),dy,xs,ys,drawangle,image_blend,image_alpha)
     }
 
     if (dot_hitbox) {

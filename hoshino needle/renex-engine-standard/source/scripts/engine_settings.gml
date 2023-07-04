@@ -108,7 +108,7 @@
     //allow pressing A and D to move 1 pixel left and right to change your align
     global.a_d_trick=false
     //make the Medium difficilty bow lag behind like in the original game
-    global.bow_lag=true
+    global.bow_lag=false
     //prevents shootkid from working if too close to a wall
     global.accurate_shootkid=true
     //angle the player (and the player's bullets) to match slopes
@@ -148,7 +148,7 @@
 //game behavior
     //fullscreen options
     global.fullscreen_cursor_visible=false
-    global.fullscreen_caption_visible=true
+    global.fullscreen_caption_visible=false
     //don't go back to the menu - quit the game immediately when pressing esc
     global.esc_always_quits=false
     //automatically updates the window caption with deathtime

@@ -238,6 +238,7 @@
 			|ps2_tint
 			|ps3_rainbow
 			|ps3_cloud
+			|ps3_pink
 			|ps3_dot
 		+lighting engine
 			|vs2_shadow
@@ -247,4 +248,5 @@
 	|shader_tint
 	|shader_rainbow
 	|shader_cloud
+	|shader_pink
 	|shader_dot
