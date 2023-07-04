@@ -40,6 +40,7 @@
 	|sprDemoBlock
 	|sprWarp
 	|sprDynamicPlatform
+	|sprite418
 	|sprUpPlatform
 	|sprJumpThrough
 	|sprPlatform9slice
@@ -426,3 +427,7 @@
 |sprite411
 |sprite413
 |sprite412
+|sprite414_spikedown
+|sprite415_spikeleft
+|sprite416_spikeright
+|sprite417_spikeup
