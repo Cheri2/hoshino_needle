@@ -38,6 +38,8 @@
 	|rm32
 	|rm33
 	|rm34
+	|rm35
+	|rm36
 	|rmTemplate
 +Tools
 	|rmCreateSoundPackTool
