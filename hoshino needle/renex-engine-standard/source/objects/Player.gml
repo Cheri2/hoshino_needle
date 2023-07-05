@@ -271,7 +271,7 @@ if (!frozen) {
         ///look for vine objects
         onVineL=false
         onVineR=false
-        if (!onPlatform && !onGround) {
+        if ((!onPlatform||true) && !onGround) {
             onVineType="normal"
             if (instance_place(x-1,y,WallJumpL)) onVineL=true
             if (instance_place(x+1,y,WallJumpR)) onVineR=true
@@ -415,7 +415,7 @@ applies_to=self
 //onVineL and onVineR are set in the movement block for consistency with Studio engines
 
 hang=false
-if (!vvvvvv) if (!onPlatform) {
+if (!vvvvvv) //if (!onPlatform) {
     if (onVineL || onVineR) {
         hang=true
         facing=esign(onVineL-onVineR,1)
@@ -457,7 +457,7 @@ if (!vvvvvv) if (!onPlatform) {
                 hspeed=3*facing
             }
         }
-    }
+  //  }
 
     if (hang) {
         //eat djump when maker vines is disabled
