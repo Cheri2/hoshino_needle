@@ -133,7 +133,7 @@
     //2 for pausing the level music immediately
     //3 for doing nothing (music keeps playing)
     //4 for music slowdown
-    global.gameover_music=0
+    global.gameover_music=4
     //block break:
     //0 for remastered sound effect
     //1 for yuuutu engine

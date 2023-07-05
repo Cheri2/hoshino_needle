@@ -41,6 +41,8 @@
 	|rm35
 	|rm36
 	|rm37
+	|rm38
+	|rm39
 	|rmTemplate
 +Tools
 	|rmCreateSoundPackTool
