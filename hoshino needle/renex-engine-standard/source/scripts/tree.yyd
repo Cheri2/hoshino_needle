@@ -240,6 +240,7 @@
 			|ps3_cloud
 			|ps3_pink
 			|ps3_dot
+			|ps3_clr
 		+lighting engine
 			|vs2_shadow
 			|ps3_light
@@ -250,3 +251,4 @@
 	|shader_cloud
 	|shader_pink
 	|shader_dot
+	|shader_clr

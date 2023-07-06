@@ -416,6 +416,7 @@
 	|DepthTint
 	|DepthCloud
 	|DepthPink
+	|DepthClr
 	|object420
 	|DepthShaderReset
 	|invertedblock
