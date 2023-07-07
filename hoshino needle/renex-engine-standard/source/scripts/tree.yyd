@@ -1,4 +1,3 @@
-|engine_settings
 +CUSTOM
 	|custom_init
 	|custom_save
@@ -7,6 +6,7 @@
 	|custom_options
 	|custom_traps
 	|custom_language
+	|engine_settings
 +saving
 	|savedata_init
 	|settings_default

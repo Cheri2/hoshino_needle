@@ -5,8 +5,10 @@ action_id=603
 applies_to=self
 */
 ///player properties
-
-
+// alternative physics from yoyo1.4
+experimental=0
+// debug
+hoshi=0
 //jump vspeed values, and number of jumps
 jump=8.5
 jump2=7
@@ -286,10 +288,9 @@ if (!frozen) {
 /*"/*'/**//* YYD ACTION
 lib_id=1
 action_id=603
-applies_to=self
+applies_to=other
 */
 ///movement
-
 if (!frozen) {
     if (!inside_view()) instance_activate_around_player()
 
@@ -319,6 +320,7 @@ if (!frozen) {
         }
     } else {
         if (input_h!=0 && input_h!=onVineL-onVineR) {
+        if(experimental=0) {
             //if moving and not touching vines
             if (walljumpboost!=0) {
                 //vine boost
@@ -338,6 +340,32 @@ if (!frozen) {
                         hspeed=maxSpeed*input_h
                     }
                 }
+            }
+            }
+            else {
+            var _YoYoNotOnBlock, _YoYoOnVineL, _YoYoOnVineR;
+_YoYoNotOnBlock = (!vvvvvv && place_free(x,y+1*vflip));  // copied from Line 4 of Action 9
+_YoYoOnVineL = (_YoYoNotOnBlock && ((distance_to_object(WallJumpL)<2) || (distance_to_object(CautionStripL)<2) || (distance_to_object(CautionFastL)<2)));
+_YoYoOnVineR = (_YoYoNotOnBlock && ((distance_to_object(WallJumpR)<2) || (distance_to_object(CautionStripR)<2) || (distance_to_object(CautionFastR)<2)));
+
+if ((input_h == -1 && !_YoYoOnVineR) || (input_h == 1 && !_YoYoOnVineL)){
+    if (walljumpboost!=0) {
+        hspeed=(maxSpeed+1)*input_h
+    } else {
+        if (slipper) {
+            hspeed=inch(hspeed,maxSpeed*input_h,slipper.slip)
+        } else {
+            if (global.use_momentum_values && !ladder) {
+                if (onPlatform) hspeed+=input_h*mm_ground_accel
+                else hspeed+=input_h*mm_air_accel
+            } else {
+                hspeed=maxSpeed*input_h
+            }
+        }
+    }
+}else{
+    maxSpeed = abs(hspeed);  // bypass hspeed restriction later on in this event
+}
             }
         } else {
             //the input is neutral
@@ -415,7 +443,7 @@ applies_to=self
 //onVineL and onVineR are set in the movement block for consistency with Studio engines
 
 hang=false
-if (!vvvvvv) //if (!onPlatform) {
+if (!vvvvvv) if (true || !onPlatform) {
     if (onVineL || onVineR) {
         hang=true
         facing=esign(onVineL-onVineR,1)
@@ -457,15 +485,18 @@ if (!vvvvvv) //if (!onPlatform) {
                 hspeed=3*facing
             }
         }
-  //  }
+    }
 
     if (hang) {
         //eat djump when maker vines is disabled
         if (key_pressed[key_jump] && !global.maker_vines) {
             if (onPlatform) {
-                djump=1
-                walljump=2
-            } else if (djump<maxjumps) {
+          //    djump=1
+           //   walljump=2
+             // hoshi+=1
+           }
+           else
+            if (djump<maxjumps) {
                 djump+=1
                 walljump=-2
             }
@@ -782,9 +813,8 @@ applies_to=self
 ///buggy walljump sound
 
 if (walljump!=0) {
-        if (walljump>0) sound_play_slomo("sndJump")
-        else sound_play_slomo("sndDJump")
-    walljump=inch(walljump,0,1)
+sound_play_slomo("sndJump")
+    walljump=0
 }
 /*"/*'/**//* YYD ACTION
 lib_id=1
