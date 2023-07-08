@@ -58,6 +58,9 @@ if (is_ingame() && room!=global.difficulty_room) {
 if (global.test_run) {
     debug_keys()
 }
+if (keyboard_check_pressed(vk_backspace)) {
+    global.debug_overlay=!global.debug_overlay
+}
 
 system_hotkeys()
 

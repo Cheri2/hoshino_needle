@@ -28,11 +28,11 @@ if (global.debug_overlay) {
     draw_set_font(fntFileSmall)
 
     str=""
-    if (instance_exists(Player)) {
+        if (instance_exists(Player)) {
         str="X: "+string_better(Player.x)+" (align "+string(Player.x mod 3)+")#"
            +"Y: "+string_better(Player.y)+"#"
     }
-
+    if(global.test_run=true) {
 
     str+="Room: "+room_get_name(room)+" ("+string(room)+")#"
     str+="Inst: "+string(instance_count)+"#"
@@ -45,7 +45,7 @@ if (global.debug_overlay) {
 
     str+=string_repeat("God mode#",global.debug_god)
         +string_repeat("Inf jump#",global.debug_jump)
-
+}
     var c;c=0
     for (i=0;i<100;i+=1) if (surface_exists(i)) c+=1
     if (c==100) str+="ALERT: too many surfaces!"
@@ -107,7 +107,7 @@ if (global.test_run) if (keyboard_check(vk_control) && keyboard_check(ord("S")))
 
 camera_apply()
 
-if (global.debug_hitbox) {
+if (global.debug_hitbox && global.test_run) {
     draw_set_color($ff00ff)
     var left,top;
     with (all) {
