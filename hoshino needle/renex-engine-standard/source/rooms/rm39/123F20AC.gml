@@ -1,3 +1,3 @@
 //gm82 fields begin
-roomTo=rm25
+roomTo=rm40
 //gm82 fields end

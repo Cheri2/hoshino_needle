@@ -46,8 +46,8 @@
 
 //difficulties
     //difficulty options:
-    add_difficulty("Medium")
-    add_difficulty("Impossible",true)
+    add_difficulty("Dream")
+    add_difficulty("Nightmare")
 
     //you can replace these with bow/no bow for example, or even add more.
     //there is a globalvar called "difficulty" that's automatically set for you.

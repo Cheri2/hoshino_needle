@@ -5,8 +5,8 @@
 	|custom_sound_properties
 	|custom_options
 	|custom_traps
-	|custom_language
 	|engine_settings
+	|custom_language
 +saving
 	|savedata_init
 	|settings_default
