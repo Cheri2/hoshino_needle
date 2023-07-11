@@ -112,7 +112,7 @@
     //prevents shootkid from working if too close to a wall
     global.accurate_shootkid=true
     //angle the player (and the player's bullets) to match slopes
-    global.angle_slopes=true
+    global.angle_slopes=false
     //time in frames to allow single jumping after leaving a surface
     //turn this off for a precision needle game
     global.coyote_time=0
