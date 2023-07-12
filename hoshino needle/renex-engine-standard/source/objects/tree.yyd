@@ -415,6 +415,7 @@
 	|DepthRainbow
 	|DepthTint
 	|DepthCloud
+	|object436
 	|DepthPink
 	|DepthClr
 	|object420
@@ -437,7 +438,9 @@
 |Warp
 |objDepression
 |objMania
+|object434
 |objRainbow
+|object435
 |object426
 |object427
 |object428

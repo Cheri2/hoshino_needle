@@ -66,6 +66,8 @@
 	|rm60
 	|rm61
 	|rm62
+	|rm63
+	|rm64
 	|rmTemplate
 +Tools
 	|rmCreateSoundPackTool
