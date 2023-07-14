@@ -216,6 +216,7 @@
 	|opt_screenshake
 	|opt_savevalign
 	|opt_left_right
+	|opt_bow
 	|opt_rebind_keyboard
 	|opt_rebind_joystick
 +bonus

@@ -74,12 +74,33 @@ if (argument0=="draw") {
     if (fixspr) draw_sprite_ext(drawspr,floor(drawframe),floor(drawx+(image_xscale<0)),dy,xs,ys,drawangle,image_blend,image_alpha)
     else draw_sprite_ext(drawspr,floor(drawframe),floor(drawx),dy,xs,ys,drawangle,image_blend,image_alpha)
 
-    if (bow) {
         dy=floor(bowy+abs(lengthdir_y(2,drawangle))*vflip+(vflip==-1))
         if ((drawspr=sprPlayerIdle || drawspr=sprPlayerIdleOld) && floor(drawframe)==3) dy+=vflip //bobbing
-        draw_sprite_ext(sprBow,clamp(-(djump-maxjumps)*3,0,3),floor(bowx),dy,xs,ys,drawangle,image_blend,image_alpha)
-    }
+        switch(settings("bowclr")) {
+        case 0:
+        draw_sprite_ext(sprBow,3,floor(bowx),dy,xs,ys,drawangle,image_blend,image_alpha)
+        break;
+    case 1:
+    draw_sprite_ext(sprBow,clamp(-(djump-maxjumps)*3,0,3),floor(bowx),dy,xs,ys,drawangle,image_blend,image_alpha)
+    break;
+    case 2:
+    draw_sprite_ext(sprBow,clamp((djump-maxjumps)+4,0,4),floor(bowx),dy,xs,ys,drawangle,image_blend,image_alpha)
+   break;
+     case 3:
+    if(player_can_jump() || instance_place(x,y+vflip,Water1) || instance_place(x,y+vflip,PlatformWater) || instance_place(x,y+vflip,GuyWater) || ladderjump) {
+    draw_sprite_ext(sprBow,6,floor(bowx),dy,xs,ys,drawangle,image_blend,image_alpha)
+    } else draw_sprite_ext(sprBow,clamp(-(djump-maxjumps)*3,0,3),floor(bowx),dy,xs,ys,drawangle,image_blend,image_alpha)
+    break;
+    case 4:
+        if(player_can_jump() || instance_place(x,y+vflip,Water1) || instance_place(x,y+vflip,PlatformWater) || instance_place(x,y+vflip,GuyWater) || ladderjump) {
+    draw_sprite_ext(sprBow,5,floor(bowx),dy,xs,ys,drawangle,image_blend,image_alpha)
+    } else if( instance_place(x,y+vflip,Water3)) {
+        draw_sprite_ext(sprBow,6,floor(bowx),dy,xs,ys,drawangle,image_blend,image_alpha)
+     } else draw_sprite_ext(sprBow,clamp(-(djump-maxjumps)*3,0,3),floor(bowx),dy,xs,ys,drawangle,image_blend,image_alpha)
+    break;
+    default :
 
+        }
     if (dot_hitbox) {
         draw_sprite(sprWhiteDot,0,floor(drawx),floor(drawy))
     }

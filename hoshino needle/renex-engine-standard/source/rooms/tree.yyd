@@ -70,6 +70,7 @@
 	|rm64
 	|rm65
 	|rm66
+	|rm67
 	|rmTemplate
 +Tools
 	|rmCreateSoundPackTool
