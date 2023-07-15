@@ -12,7 +12,7 @@ clear_view=1
 
 bg_visible0=1
 bg_is_foreground0=0
-bg_source0=background101
+bg_source0=background108_bg
 bg_xoffset0=0
 bg_yoffset0=0
 bg_tile_h0=1
@@ -70,7 +70,7 @@ bg_tile_v5=1
 bg_hspeed5=0
 bg_vspeed5=0
 bg_stretch5=0
-bg_visible6=1
+bg_visible6=0
 bg_is_foreground6=0
 bg_source6=background102
 bg_xoffset6=0
