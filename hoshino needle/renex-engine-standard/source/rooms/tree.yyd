@@ -80,6 +80,8 @@
 	|rm74
 	|rm75
 	|rm76
+	|rm77
+	|rm78
 	|rmTemplate
 +Tools
 	|rmCreateSoundPackTool

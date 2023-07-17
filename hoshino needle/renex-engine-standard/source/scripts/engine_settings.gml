@@ -20,7 +20,7 @@
 */
 
 //game properties
-    global.game_title="Hoshino Needle"
+    global.game_title="I wanna hold your hand, and see the night sky overnight, and make a wish to a shooting star together"
     //intended room speed
     //note: player always runs at 50hz! look in player step for an explanation.
     global.game_speed=50
