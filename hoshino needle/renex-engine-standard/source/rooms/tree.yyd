@@ -2,7 +2,7 @@
 |rmTitle
 |rmMenu
 |rmOptions
-+Game
++Aside
 	|rmDifficulty
 	|rm1
 	|rm2
@@ -85,6 +85,9 @@
 	|rm79
 	|rm80
 	|rm81
+	|rm82
 	|rmTemplate
-+Tools
-	|rmCreateSoundPackTool
++Bside
+	|rm1b
+	+Tools
+		|rmCreateSoundPackTool

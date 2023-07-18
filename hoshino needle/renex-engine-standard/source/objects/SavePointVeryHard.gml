@@ -7,6 +7,6 @@ applies_to=self
 mydifficulty=2
 event_inherited()
 sprite_index=sprSaveVeryHard
-if(difficulty>=1) {
-if(!place_meeting(x,y,AutoSaver)) instance_destroy()
+if(difficulty>=2 && !place_meeting(x,y,AutoSaver)) {
+    instance_destroy()
 }

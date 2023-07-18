@@ -14,8 +14,14 @@ savedatap("width",1)
 savedatap("height",1)
 savedatap("obj",Player)
 
+if(difficulty mod 2=0) {
 savedatap("room",global.first_room)
-
+}
+else {
+if(difficulty mod 2=1) {
+savedatap("room",global.ex_room)
+}
+}
 savedatap("hash","new file")
 
 global.player_skin=global.player_default_skin

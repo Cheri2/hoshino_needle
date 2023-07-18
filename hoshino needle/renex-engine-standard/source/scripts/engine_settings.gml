@@ -20,7 +20,7 @@
 */
 
 //game properties
-    global.game_title="I wanna hold your hand, see the night sky overnight, and make a wish to a shooting star together"
+    global.game_title="I wanna make a wish to a shooting star together with you"
     //intended room speed
     //note: player always runs at 50hz! look in player step for an explanation.
     global.game_speed=50
@@ -33,7 +33,7 @@
     global.hub_room=rm1
     //password for encrypting saves.
     //if you don't want a password, use "" and the save files will be unencrypted dsmaps.
-    global.encrypt_save_password="renex"
+    global.encrypt_save_password="hoshinostella"
     //save game to appdata instead of a /save folder
     global.use_appdata=false
     //use savefile thumbnails
@@ -46,8 +46,10 @@
 
 //difficulties
     //difficulty options:
-    add_difficulty("Dream")
-    add_difficulty("Nightmare")
+    add_difficulty("A-Side")
+    add_difficulty("B-Side")
+    add_difficulty("VHard A")
+    add_difficulty("VHard B")
 
     //you can replace these with bow/no bow for example, or even add more.
     //there is a globalvar called "difficulty" that's automatically set for you.
