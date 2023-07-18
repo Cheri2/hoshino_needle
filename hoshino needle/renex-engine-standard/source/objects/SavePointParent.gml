@@ -20,6 +20,16 @@ msg=key_get_name(key_shoot)+lang("presstosave")
 if (difficulty>mydifficulty) {
     instance_destroy()
 }
+#define Alarm_0
+/*"/*'/**//* YYD ACTION
+lib_id=1
+action_id=603
+applies_to=self
+*/
+// stella is cute
+
+image_speed=0
+image_index=0
 #define Step_1
 /*"/*'/**//* YYD ACTION
 lib_id=1
@@ -57,14 +67,6 @@ action_id=603
 applies_to=self
 */
 if (!global.contact_saves && !global.press_shoot_saves && !other.dead) event_user(0)
-#define Other_7
-/*"/*'/**//* YYD ACTION
-lib_id=1
-action_id=603
-applies_to=self
-*/
-image_speed=0
-image_index=0
 #define Other_10
 /*"/*'/**//* YYD ACTION
 lib_id=1
@@ -72,13 +74,14 @@ action_id=603
 applies_to=self
 */
 ///schedule save
-if (image_index==0) {
+if (alarm[0]<1) {
     with (Player) if (instance_place(x,y,AntiSoftlockBlock)) exit
     if ((Player.vflip==1 && (image_angle<45 || image_angle>315)) || (Player.vflip==-1 && abs(image_angle-180)<45) || global.flip_saves) {
         image_index=1
         image_speed=1/room_speed
         sound_play("sndSave")
         save=1
+        alarm[0]=25
     }
 }
 #define Draw_0
@@ -88,8 +91,3 @@ action_id=603
 applies_to=self
 */
 draw_self()
-
-if (notice) {
-    draw_sign_text(x+16,y-10,font,color,msg,false)
-    notice=0
-}

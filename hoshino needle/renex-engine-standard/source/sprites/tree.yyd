@@ -126,10 +126,18 @@
 		|sprGibsArm
 		|sprGibsFoot
 +Threats
+	|sprite484
+	|sprite485
+	|sprite486
+	|sprite487
 	|sprSpike
 	|sprSpikeLeft
 	|sprSpikeRight
 	|sprSpikeUp
+	|sprite480
+	|sprite481
+	|sprite482
+	|sprite483
 	|sprite392
 	|sprite393
 	|sprite394
