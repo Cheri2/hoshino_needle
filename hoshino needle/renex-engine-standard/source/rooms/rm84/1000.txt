@@ -1,0 +1,2 @@
+background131,232,0,0,24,8,8,0,1,1,4294967295
+background133_Celeste_character_Madeline,48,448,0,0,240,151,0,1,1,4294967295
