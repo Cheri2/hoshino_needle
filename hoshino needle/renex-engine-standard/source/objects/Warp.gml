@@ -21,8 +21,15 @@ if (warpToPlayerstart) {
     if (warpsound!="") sound_play(warpsound)
     move_player(warpToPlayerstart.x+17,warpToPlayerstart.y+23,0)
 } else if (warpX==noone && warpY==noone && roomTo=room) {
-    sound_play("sndBlockChange")
-    instance_destroy()
+    if (global.warping) exit
+global.warping=true
+
+if (argument_count>=2 && !Player.dead) {
+    move_player(argument[1],argument[2],0)
+} else Player.dead=1
+
+input_clear()
+    room_goto_next()
 } else {
     collect_items()
     if (roomTo!=room) {
