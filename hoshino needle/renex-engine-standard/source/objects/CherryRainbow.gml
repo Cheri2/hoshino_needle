@@ -17,7 +17,7 @@ lib_id=1
 action_id=603
 applies_to=self
 */
-image_blend=make_color_hsv((global.increment*2*dt) mod 256,255,255)
+image_blend=make_color_hsv((global.increment*0.2*dt) mod 256,111,255)
 #define Draw_0
 /*"/*'/**//* YYD ACTION
 lib_id=1
