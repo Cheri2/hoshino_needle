@@ -2,6 +2,6 @@ sprite=sprWallJumpR
 visible=1
 solid=0
 persistent=0
-depth=10
+depth=8
 parent=
 mask=

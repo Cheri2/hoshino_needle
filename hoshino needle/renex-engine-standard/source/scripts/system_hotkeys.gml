@@ -13,7 +13,7 @@ if (global.key_pressed[key_restart]) {
 }
 
 //pause
-if (is_ingame()) {
+if (is_ingame() && player_on_ground()) {
     if (pause_delay<=0) {
         if (global.key_pressed[key_menu]) {
             if (!global.pause) {

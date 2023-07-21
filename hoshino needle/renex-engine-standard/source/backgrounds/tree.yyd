@@ -11,6 +11,7 @@
 	|bgTree2
 	|bgTree3
 	|bgBackdrop1
+	|ConfusingCeleste
 	|bgBackdrop2
 	|bgBackdrop3
 +thumbs
@@ -19,6 +20,7 @@
 	|bgThumbBroken
 +autotiler
 	|bgMarkMazes32
+	|background138
 	|bgMarkMazes16
 	|background49
 	|bgBrownBlock32
@@ -126,3 +128,5 @@
 |background133_Celeste_character_Madeline
 |background134
 |background135
+|background136_tile_celeste_main
+|background139_moon-and-stars-background

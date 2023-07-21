@@ -2,11 +2,11 @@ RULESET / ENGINE BEHAVIOUR DETAILS
 Read this before complaining something is wrong!!
 These are for more smooth gameplay, and usually make the game easier.
 
-1. Platform does not snap. This is configurable but you absolutely want to set it as 'No Snap' in certain screens.
+1. Platform does not snap. This is configurable but you absolutely want to set it as 'No Snap' in certain screens. It makes your life a lot easier!!
 2. Key input is not flushed at room start. (Although autosave exists so you don't lose progress after warp)
 3. If you get stuck between ceiling and platform, you just fall down instead of getting softlocked. !!This applies to rotated platform too!! Don't attempt to assassinate me because you phased through rotated platform to death.
 4. Platform + Vine should work fine unlike standard renex engine, but there might be some niche inaccuracy cases that are absolutely unrelated to actual gameplay.
 5. Savepoint hitbox is 32x32 square. You can save at the edge of block.
 6. You can change whether y-subpixel is saved or not in setting.
 7. You can change what happens if you press both arrow key at once. Default behaviour is same as yuuutu and it is intended way to playing, but you can get advantage over it if you want to.
-8. Slopes are 45 degrees. Spikes are arctan(1/2) degrees. Don't get confused.
+8. Slopes are 45 degrees from ground, while spikes are arctan(1/2) degrees. Don't get confused.

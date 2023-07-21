@@ -17,13 +17,22 @@ lib_id=1
 action_id=603
 applies_to=self
 */
+kget=real(string_digits(room_get_name(room)))
+if(difficulty>1) kget+=200
+if(kget>0&&kget<=100) {settings("normalberry",max(kget,settings("normalberry")))}
+else if(kget<=200&&kget>100) {
+settings("bronzeberry",max(kget-100,settings("bronzeberry")))
+}
+else if(kget>200&&kget<=300) {settings("silverberry",max(kget-200,settings("silverberry")))}
+else if(kget<=400&&kget>300) {
+settings("goldberry",max(kget-300,settings("goldberry")))
+}
 if (warpToPlayerstart) {
     if (warpsound!="") sound_play(warpsound)
     move_player(warpToPlayerstart.x+17,warpToPlayerstart.y+23,0)
 } else if (warpX==noone && warpY==noone && roomTo=room) {
     if (global.warping) exit
 global.warping=true
-
 if (argument_count>=2 && !Player.dead) {
     move_player(argument[1],argument[2],0)
 } else Player.dead=1

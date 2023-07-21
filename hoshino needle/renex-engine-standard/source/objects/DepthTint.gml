@@ -6,6 +6,13 @@ applies_to=self
 */
 color=$ff00ff
 amount=0
+#define Step_0
+/*"/*'/**//* YYD ACTION
+lib_id=1
+action_id=603
+applies_to=self
+*/
+color=make_color_hsv(120+60*sin(current_time/6000),254,254)
 #define Other_4
 /*"/*'/**//* YYD ACTION
 lib_id=1
