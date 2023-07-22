@@ -5,13 +5,13 @@ settings("sfxvol",0.5)
 settings("sfxvol",0)
 settings("l+r behavior",lr_right)
 
-settings("blood",3)
+settings("blood",1)
 settings("filter",1)
-settings("anim",1)
+settings("anim",0)
 
-settings("valign",1)
+settings("valign",0)
 settings("shakeamount",1)
-
+settings("pform",0)
 settings("screenscale",1)
 settings("normalberry",0)
 

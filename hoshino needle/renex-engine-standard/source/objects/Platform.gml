@@ -9,7 +9,7 @@ path=noone
 path_action=path_action_reverse
 path_absolute=false
 
-snap=false
+snap=settings("pform")
 phase=false
 
 hdeficit=0

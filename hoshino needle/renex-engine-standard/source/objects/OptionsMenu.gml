@@ -7,7 +7,7 @@ applies_to=self
 sel=0
 
 xdraw=global.width/2-276
-ydraw=132
+ydraw=132-max(0,sel*32-192)
 xsep=550
 ysep=32
 
@@ -59,11 +59,12 @@ lib_id=1
 action_id=603
 applies_to=self
 */
+ydraw=132-max(0,sel*32-192)
 draw_set_color(global.text_color)
 
 draw_set_halign(1)
 draw_set_font(fntFileBig)
-draw_text(global.width/2,64,lang("optionsmenu"))
+draw_text(global.width/2,64-max(0,sel*32-192),lang("optionsmenu"))
 
 for (i=0;i<numoptions;i+=1) {
     draw_set_halign(0)

@@ -163,6 +163,19 @@ if (sel==-1) {
     draw_sprite_ext(sprite,floor(image_index),xcursor,ycursor,1,1,angle,$ffffff,1)
 }
 
+draw_set_valign(0)
+draw_sprite(sprite489,0,40,global.height-128)
+draw_text(80,global.height-128,string(settings("normalberry")))
+draw_sprite(sprite489,1,120,global.height-128)
+draw_text(160,global.height-128,string(settings("bronzeberry")))
+draw_sprite(sprite489,2,200,global.height-128)
+draw_text(240,global.height-128,string(settings("silverberry")))
+draw_sprite(sprite489,3,280,global.height-128)
+draw_text(320,global.height-128,string(settings("goldberry")))
+draw_sprite(sprite489,4,360,global.height-128)
+draw_text(400,global.height-128,string(settings("stellaberry")))
 draw_set_valign(2)
+draw_text(40,global.height-72,"You can pause only when you're standing on ground!")
+
     draw_text(40,global.height-36,lang("deaths")+": "+string(savedata("deaths"))+"#"+lang("time")+": "+format_time(savedata("time")))
 draw_set_valign(0)

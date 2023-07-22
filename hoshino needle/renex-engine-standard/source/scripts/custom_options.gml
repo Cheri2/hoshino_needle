@@ -14,5 +14,6 @@ add_option(opt_potato)
 //option for saving valign
 add_option(opt_savevalign)
 add_option(opt_bow)
+add_option(opt_platformtype)
 add_option(opt_rebind_keyboard)
 add_option(opt_rebind_joystick)

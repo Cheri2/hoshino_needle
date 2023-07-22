@@ -169,8 +169,8 @@ var i;
 draw_set_color(global.text_color)
 draw_set_halign(1)
 draw_set_font(fntFileBig)
-draw_text(global.width/2,64,lang("filemenu"))
-draw_set_color($ffffff)
+draw_text(global.width/2,64,"Select File")
+draw_set_color($000000)
 
 for (i=0;i<3;i+=1) {
     savedata_select(i)
@@ -226,10 +226,9 @@ draw_set_halign(0)
 
 draw_sprite_ext(sprFileBorder,0,x+select*240,y,32,32,0,$ffffff,1)
 draw_sprite(sprite_index,-1,dx,y+310+64)
-draw_sprite(sprDynamicPlatform,0,dx-17,y+319+64)
 
 //option info
-draw_set_color(global.text_color)
+draw_set_color($000000)
 draw_set_font(fntFileSmall)
 draw_set_halign(0)
 draw_text(34,global.height-52,"["+key_get_name(key_shoot)+"] "+lang("menuback"))
