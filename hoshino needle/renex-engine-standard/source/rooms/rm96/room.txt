@@ -1,8 +1,8 @@
 caption=
 width=800
 height=608
-snap_x=4
-snap_y=8
+snap_x=16
+snap_y=16
 isometric=0
 roomspeed=30
 roompersistent=0
@@ -12,7 +12,7 @@ clear_view=1
 
 bg_visible0=1
 bg_is_foreground0=0
-bg_source0=background140_bg
+bg_source0=background146_vecteezy_abstract-wave-background-with-pastel-color_7188896
 bg_xoffset0=0
 bg_yoffset0=0
 bg_tile_h0=1
