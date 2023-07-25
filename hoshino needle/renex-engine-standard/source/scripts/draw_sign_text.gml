@@ -13,8 +13,8 @@ draw_set_font(font)
 w=string_width(message)
 h=string_height(message)
 
-dx=median(view_xview+w/2+8,dx,view_xview+view_wview-w/2-8)
-dy=median(view_yview+h+8,dy,view_yview+view_hview-8)
+dx=median(w/2+8,dx-view_xview,view_wview-w/2-8)
+dy=median(h+8,dy-view_yview,view_hview-8)
 
 draw_set_color(0)
 if (box) {
