@@ -12,6 +12,7 @@ applies_to=self
 */
 if (!savedatap("clear")) {
     savedatap("clear",true)
+    savedatap("cleard",savedatap("deaths"))
     autosave_asap()
     savedata_write()
 }

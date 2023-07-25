@@ -30,7 +30,7 @@
     //first room that's actually part of the game
     global.first_room=rm1
     //room to return to when using WarpToHub object
-    global.hub_room=rm1
+    global.hub_room=rmAsEnd100
     //password for encrypting saves.
     //if you don't want a password, use "" and the save files will be unencrypted dsmaps.
     global.encrypt_save_password="hoshinostella"
@@ -166,7 +166,7 @@
     //press shoot to save when touching a save
     global.press_shoot_saves=true
     //let all saves work even while flipped the wrong way
-    global.flip_saves=true
+    global.flip_saves=false
     //(0-8) reduces lag during gameplay, but causes small hiccup on room start.
     //each pass reduces solid instance count by almost half so with 2 passes we should
     //have around 30% of block instances.

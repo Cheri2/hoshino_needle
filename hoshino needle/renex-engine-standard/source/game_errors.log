@@ -1,0 +1,9 @@
+ERROR in
+action number 1
+of  Step Event
+for object Button:
+
+In script button_actions:In script load_jmap:In script get_object:Error in code at line 4:   
+if (i<0) {show_error("Error loading project: object "+qt+argument0+qt+" doesn't seem to exist in the project.",0) return noone}                                                            ^at position 59: Wrong type of arguments to +.
+
+

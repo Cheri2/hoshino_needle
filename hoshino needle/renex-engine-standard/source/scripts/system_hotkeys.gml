@@ -46,6 +46,11 @@ if (keyboard_check_pressed(vk_escape) || scheduled_close_button) {
     }
 }
 
+if(keyboard_check_pressed(vk_f12)) {
+if(savedatap("clear")) {
+warp_to(rmAsEnd100)
+}
+}
 //close game
 if (keyboard_check_pressed(vk_f4) && keyboard_check(vk_alt)) {
     event_game_end()

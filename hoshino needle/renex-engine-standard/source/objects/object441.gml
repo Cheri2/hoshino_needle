@@ -59,7 +59,7 @@ case 3:
 draw_sign_text(x+16,y-10,font,color,"B-Side VeryHard",true)
 break;
 case 4:
-draw_sign_text(x+16,y-10,font,color,"Extras",true)
+draw_sign_text(x+16,y-10,font,color,"Stella's Gift",true)
 break;
 }
 }
