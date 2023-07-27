@@ -276,6 +276,7 @@
 	|GateDown
 	|ScreenWrap
 	|Water1
+	|SutokuraWater
 	|Water2
 	|Water3
 	|CatharsisWater
@@ -429,6 +430,7 @@
 	|ShadowVolume
 |PlayerStart
 |Block
+|ChBlock
 |Platform
 |WallJumpL
 |WallJumpR
@@ -454,3 +456,4 @@
 |object441
 |endingScore
 |theportalpostend
+|objSetCoyote

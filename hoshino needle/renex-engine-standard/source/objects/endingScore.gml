@@ -18,19 +18,19 @@ else if(k<5000) {
  rank = "You arrived even before sunset! You're fast. [S+ Rank]"
  berries=6
 }
-else if(k<20000) {
+else if(k<11000) {
  rank = "First shooting star is falling. Let's go. [S Rank]"
  berries=5
 }
-else if(k<45000) {
+else if(k<18000) {
  rank = "It's midnight? We still have much time from dawn. [A Rank]"
  berries=4
 }
-else if(k<80000) {
+else if(k<26000) {
  rank = "It's a bit late, but meteor stream won't end today so it's fine. [B Rank]"
  berries=3
 }
-else if(k<125000) {
+else if(k<36000) {
  rank = "Was it a tough journey? Please take care of yourself. [C Rank]"
  berries=2
 }

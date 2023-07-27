@@ -529,6 +529,9 @@ if (instance_place(x,y,GuyWater)) {
     djump=maxjumps
     onfire=false
 }
+if (instance_place(x,y,SutokuraWater)) {
+    vspeed-=0.6
+}
 if (instance_place(x,y,Water1) || instance_place(x,y,Water3)) {
     if (vspeed*vflip>2) vspeed=2*vflip
     djump=1
@@ -538,6 +541,7 @@ if (instance_place(x,y,Water2) || instance_place(x,y,NekoronWater) || instance_p
 }
 
 //one way gates
+
 coll=instance_place(x+hspeed,y,GateLeft) if (coll) if (x+1-hspeed<=coll.bbox_left+2) {move_player(x+coll.bbox_left-(bbox_right+1),y,1) hspeed=0}
 coll=instance_place(x+hspeed,y,GateRight) if (coll) if (x-hspeed>=coll.bbox_right-2) {move_player(x+coll.bbox_right-(bbox_left),y,1) hspeed=0}
 coll=instance_place(x,y+vspeed,GateUp) if (coll) if (y+1-vspeed<=coll.bbox_top+2) {move_player(x,y+coll.bbox_top-(bbox_bottom+1)-gravity,1) vspeed=0}
@@ -617,7 +621,78 @@ lib_id=1
 action_id=603
 applies_to=self
 */
+if(instance_exists(ChBlock)) {
 ///solid collision
+var land,a,s;
+
+if (dotkid) {
+    image_xscale=1
+} else if (walljumpboost<=0) {
+    image_xscale=abs(image_xscale)*facing
+}
+//technically, solid collision is supposed to happen after the step event -
+//so we add gravity before checking for collisions
+vspeed+=gravity
+
+if (!place_free(x+hspeed,y+vspeed) ||place_meeting(x+hspeed,y+vspeed,ChBlock)) {
+    //there is a collision
+    if (!place_free(x+hspeed,y) ||place_meeting(x+hspeed,y,ChBlock)) {
+        //check for collision horizontally first
+        if (hspeed>=0) x=floor(x)
+        else x=ceil(x)
+        a=ceil(abs(hspeed))
+        s=sign(hspeed)
+        repeat (a+1) {
+            x+=s
+            if (!place_free(x,y)||place_meeting(x,y,ChBlock)) {
+                x-=s
+                player_hitwall()
+            break}
+        }
+        x-=hspeed
+        walljumpboost=0
+    }
+    cherryblock=instance_place(x,y+vspeed,ChBlock)
+if(cherryblock) coll=cherryblock
+if (coll) {
+ if (y+1-vspeed<=coll.bbox_top+2) {
+ move_player(x,y+coll.bbox_top-ceil((bbox_bottom+1)-gravity),1)
+ vspeed=gravity}
+
+}
+    if (!place_free(x,y+vspeed)||place_meeting(x,y+vspeed,ChBlock)) {
+        //check for collision vertically
+        a=ceil(abs(vspeed))
+        s=sign(vspeed)
+
+        repeat (a+1) {
+            y+=s
+            if (!place_free(x,y)||place_meeting(x,y,ChBlock)) {
+                y-=s
+                if (s==vflip) {
+                    if(!place_free(x,y+vspeed))player_land(0)
+                } else {
+                    player_hitceiling()
+                }
+                break
+            }
+        }
+
+        y-=vspeed
+    }
+
+    if (!place_free(x+hspeed,y+vspeed)) {
+        //if there's still a collision anyway, stop moving horizontally
+        hspeed=0
+    }
+}
+
+vsplatform=0
+//we subtract gravity because we added it before  
+vspeed-=gravity
+}
+
+else {
 var land,a,s;
 
 if (dotkid) {
@@ -676,8 +751,9 @@ if (!place_free(x+hspeed,y+vspeed)) {
 }
 
 vsplatform=0
-//we subtract gravity because we added it before  
+//we subtract gravity because we added it before
 vspeed-=gravity
+}
 /*"/*'/**//* YYD ACTION
 lib_id=1
 action_id=424

@@ -2,11 +2,10 @@
 //called when the player lands on the floor or on a platform
 
 var landed_on_platform;landed_on_platform=argument0
-
 if (!landed_on_platform) vspeed=0
 
 walljumpboost=0
-djump=1
+ djump=1
 onGround=true
 coyoteTime=global.coyote_time
 
