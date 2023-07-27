@@ -41,7 +41,7 @@
     //user interface text color
     global.text_color=$ffffff
     //enable test mode in exe builds
-    global.always_test_mode=false
+    global.always_test_mode=true
 
 
 //difficulties
