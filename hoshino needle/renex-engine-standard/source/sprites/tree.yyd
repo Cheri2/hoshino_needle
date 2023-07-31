@@ -208,7 +208,11 @@
 		|sprWalljumpR02
 	+s4
 		|sprite361_spikeup
+		|sprite506
+		|sprite508
+		|sprite509
 		|sprite363
+		|sprite507
 		|sprite362
 		|sprite364
 		|sprite366
