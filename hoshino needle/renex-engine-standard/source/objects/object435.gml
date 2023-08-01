@@ -9,6 +9,7 @@ sf_mask1=surface_create(800,608);
 sf_inline=surface_create(800,608);
 with(Block) if(object_index=Block) sprite_index=sprite391
 with(PlayerKiller) visible=false
+if(settings("waterdepth")==2) depth=-15
 #define Other_5
 /*"/*'/**//* YYD ACTION
 lib_id=1

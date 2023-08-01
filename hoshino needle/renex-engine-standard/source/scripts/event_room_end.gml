@@ -6,9 +6,9 @@ if (is_ingame()) {
 
 //restore fading/slowing music
 fading=0
-fadefrom=1
+fadefrom=1.3
 slowing=0
-slowfrom=1
+slowfrom=1.3
 sound_kind_pitch(1,1)
 sound_kind_volume(1,settings("musvol"))
 sound_kind_resume(1)

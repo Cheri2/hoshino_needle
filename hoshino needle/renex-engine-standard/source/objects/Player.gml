@@ -898,7 +898,13 @@ action_id=603
 applies_to=self
 */
 ///check autosave
-
+if (key_pressed[key_shoot] || (key[key_shoot] && global.debug_autofire_counter==1)) {if (!global.contact_saves) {
+    with (SavePointParent) {
+        if (instance_place(x,y,other.id)) {
+            event_user(0)
+        }
+    }
+}}
 autosave_do()
 #define Collision_Platform
 /*"/*'/**//* YYD ACTION

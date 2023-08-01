@@ -26,7 +26,7 @@ if (message2) message2-=1
 //music fade
 if (fading) {
     fadefrom-=0.01
-    sound_kind_volume(1,settings("musvol")*fadefrom)
+    sound_kind_volume(1,settings("musvol")*clamp(fadefrom,0,1))
     if (fadefrom<=0) {
         fading=0
         //pause when it's done fading
@@ -36,7 +36,7 @@ if (fading) {
 //music slow
 if (slowing) {
     slowfrom-=0.01
-    sound_kind_pitch(1,slowfrom)
+    sound_kind_pitch(1,clamp(slowfrom,0,1))
     if (slowfrom<=0) {
         slowing=0
         //pause when it's done slowing

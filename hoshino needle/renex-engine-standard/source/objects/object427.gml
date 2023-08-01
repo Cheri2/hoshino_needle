@@ -6,6 +6,7 @@ applies_to=self
 */
 clar=surface_create(800,608)
 with(PlayerKiller) visible=false
+if(settings("waterdepth")==2) depth=-15
 #define Step_2
 /*"/*'/**//* YYD ACTION
 lib_id=1

@@ -12,6 +12,7 @@ sprite_index=sprite488
 with(PlayerKiller) visible=false
 surf1=surface_set("1surf1",800,608)
 surf2=surface_set("1surf2",800,608)
+if(settings("waterdepth")==2) depth=-15
 #define Other_5
 /*"/*'/**//* YYD ACTION
 lib_id=1

@@ -17,6 +17,7 @@ action_id=603
 applies_to=self
 */
 surface=false
+event_inherited()
 #define Other_4
 /*"/*'/**//* YYD ACTION
 lib_id=1

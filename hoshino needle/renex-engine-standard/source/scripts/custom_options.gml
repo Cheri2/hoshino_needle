@@ -11,6 +11,7 @@ add_option(opt_blood_amount)
 add_option(opt_screenshake)
 add_option(opt_left_right)
 add_option(opt_potato)
+add_option(opt_waterdepth)
 //option for saving valign
 add_option(opt_savevalign)
 add_option(opt_bow)

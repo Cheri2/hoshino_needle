@@ -217,6 +217,7 @@
 	|opt_screenshake
 	|opt_savevalign
 	|opt_platformtype
+	|opt_waterdepth
 	|opt_left_right
 	|opt_bow
 	|opt_rebind_keyboard
