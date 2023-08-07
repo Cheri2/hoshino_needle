@@ -1,3 +1,4 @@
 //gm82 fields begin
-text="valign"
+text="Backspace = See subpixels"
+font=fntFileSmall
 //gm82 fields end

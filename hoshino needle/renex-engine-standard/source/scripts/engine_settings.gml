@@ -46,10 +46,7 @@
 
 //difficulties
     //difficulty options:
-    add_difficulty("A-Side")
-    add_difficulty("B-Side")
-    add_difficulty("VHard A")
-    add_difficulty("VHard B")
+    add_difficulty("Starry")
 
     //you can replace these with bow/no bow for example, or even add more.
     //there is a globalvar called "difficulty" that's automatically set for you.

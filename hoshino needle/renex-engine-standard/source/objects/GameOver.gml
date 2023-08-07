@@ -8,6 +8,8 @@ x=global.GUIwidth div 2
 y=global.GUIheight div 2
 alarm[0]=40/dt
 active=0
+image_speed=0
+image_index=savedata("deaths") mod 6
 #define Alarm_0
 /*"/*'/**//* YYD ACTION
 lib_id=1

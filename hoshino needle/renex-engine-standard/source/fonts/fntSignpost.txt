@@ -1,6 +1,6 @@
-name=Comic Sans MS
+name=Arial
 size=13
-bold=0
+bold=1
 italic=0
 charset=1
 aa_level=3

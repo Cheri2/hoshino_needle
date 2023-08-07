@@ -115,12 +115,12 @@ if (state="continue") {
 
 //new file
 if (state="new file") {
-    if (global.num_difficulties==1) {
+    //if (global.num_difficulties==1) {
         instance_destroy_id(TitleParticle)
         instance_destroy_id(TitleMenu)
         input_clear()
         savedata_newgame(select,global.single_difficulty)
-    } else {
+    //} else {
         if (global.key_pressed[key_left] || global.key_pressed[key_right]) {
             sound_play("sndJump")
             savedata_select(select)
@@ -133,7 +133,7 @@ if (state="new file") {
             input_clear()
             savedata_newgame(select)
         }
-    }
+  //  }
 }
 
 dx=inch(dx,x+select*239+65,16*dt)
