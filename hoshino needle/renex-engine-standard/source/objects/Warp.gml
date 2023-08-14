@@ -17,6 +17,7 @@ lib_id=1
 action_id=603
 applies_to=self
 */
+input_clear()
 kget=real(string_digits(room_get_name(room)))
 if(difficulty>1) kget+=200
 if(kget>0&&kget<=100) {settings("normalberry",max(kget,settings("normalberry")))}
@@ -37,10 +38,12 @@ if (argument_count>=2 && !Player.dead) {
     move_player(argument[1],argument[2],0)
 } else Player.dead=1
 
-input_clear()
+    persistent=1
     room_goto_next()
+    instance_destroy()
 } else {
     collect_items()
+    //input_clear()
     if (roomTo!=room) {
         if (warpsound!="") {
             persistent=1

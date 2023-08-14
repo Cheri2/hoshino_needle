@@ -24,4 +24,4 @@ lib_id=1
 action_id=603
 applies_to=self
 */
-shader_rainbow()
+//shader_rainbow()

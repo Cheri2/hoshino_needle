@@ -7,7 +7,6 @@ applies_to=self
 ///instructions
 
 //this object will save the game on contact with the player
-
 if (instance_place(x,y,Player)) {
     autosave_asap()
     instance_destroy()
@@ -18,5 +17,6 @@ lib_id=1
 action_id=603
 applies_to=self
 */
+
 autosave_asap()
 instance_destroy()
