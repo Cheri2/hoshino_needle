@@ -38,8 +38,41 @@ This game is compatible with most gamepad, but you have to configure keybinds ma
 Please don't complain about bad physics unless you set these options correctly.
 Set bow color to Dichotomy if you don't want to lose djump and somehow not know it happening. The game is much less confusing with it, if you get used to it!!
 
-
-
+~ Stages ~
+Stage 1 : "Cage"
+Stage 2 : "Vandal"
+Stage 3 : "Cookie"
+Stage 4 : "Block"
+Stage 5 : "Moon"
+Stage 6 : "Cry"
+Stage 7 : "Cloud"
+Stage 8 : "Color"
+Stage 9 : "Atone"
+Stage 10 : "Darkness"
+Stage 11 : "Stumble"
+Stage 12 : "Cute"
+Stage 13 : "Impact"
+Stage 14 : "Angel"
+Stage 15 : "Pride"
+Stage 16 : "Seeker"
+Stage 17 : "Folk"
+Stage 18 : "Flow"
+Stage 19 : "Fairy"
+Stage 20 : "Mountain"
+Stage 21 : "Weird"
+Stage 22 : "Timeless"
+Stage 23 : "Lost"
+Stage 24 : "Plumber"
+Stage 25 : "Eden"
+Stage 26 : "Scaffold"
+Stage 27 : "Emperor"
+Stage 28 : "Craft"
+Stage 29 : "Minty"
+Stage 30 : "Asteroid"
+Stage 31 : "Photon"
+Stage 32 : "City"
+Stage 33 : "Starlight"
+Stage 34 : "Farewell"
 
 
 
