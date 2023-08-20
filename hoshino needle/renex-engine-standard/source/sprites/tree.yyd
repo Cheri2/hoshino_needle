@@ -95,6 +95,7 @@
 	|sprMaskPlayer
 	|sprMaskPlayerFlip
 	|sprMaskNeedle
+	|sprMaskMadeline
 	|sprMaskNeedleFlip
 	|sprWhiteDot
 	|sprDotKid
@@ -125,6 +126,13 @@
 		|sprGibsHead
 		|sprGibsArm
 		|sprGibsFoot
+	+Madeline
+		|sprMintyIdle
+		|sprMintyRunning
+		|sprMintyFall
+		|sprMintyFall2
+		|sprMintyJump
+		|sprMintyJump2
 +Threats
 	|sprite484
 	|sprite485

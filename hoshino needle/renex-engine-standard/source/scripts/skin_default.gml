@@ -1,13 +1,15 @@
 var fixspr,dy,xs,ys;
 
 fixspr=settings("anim")
-
+if(!savedata("clear")) fixspr=0
 if (argument0=="mask") {
     if (vflip==-1) {
         if (global.use_original_mask || (global.valign05_vdiet && frac(y)==0.5)) mask_index=sprMaskPlayerFlip
+
         else mask_index=sprMaskNeedleFlip
     } else {
         if (global.use_original_mask || (global.valign05_vdiet && frac(y)==0.5)) mask_index=sprMaskPlayer
+        else if(fixspr && savedata("clear")) mask_index=sprMaskMadeline
         else mask_index=sprMaskNeedle
     }
 }
@@ -25,36 +27,37 @@ if (argument0=="step") {
             image_speed=0.1
         }
     } else if (hang) {
-        if (fixspr) sprite_index=sprPlayerSliding
+        if (fixspr) {if(djump=1) sprite_index=sprMintyFall
+         else sprite_index=sprMintyFall2
+        }
         else sprite_index=sprPlayerSlidingOld
         image_speed=0.5
     } else if (!onGround) {
         if (vspeed*vflip<-0.05) {
             if (fixspr) {
-                sprite_index=sprPlayerJump
-                image_speed=0
-                image_index+=0.5
-                if (image_index>=4) image_index-=2
+                if(djump=1)sprite_index=sprMintyJump
+                else sprite_index=sprMintyJump2
             } else {
                 sprite_index=sprPlayerJumpOld
                 image_speed=0.5
             }
         }
         if (vspeed*vflip>0.05) {
-            if (fixspr) sprite_index=sprPlayerFall
+            if (fixspr) sprite_index=sprMintyFall
             else sprite_index=sprPlayerFallOld
             image_speed=0.5
         }
     } else if (input_h!=0) {
         if (fixspr) {
-            sprite_index=sprPlayerRunning
-            image_speed=mmf_animspeed(70,80)
+            sprite_index=sprMintyRunning
+
         } else {
             sprite_index=sprPlayerRunningOld
             image_speed=0.5
         }
     } else {
-        if (fixspr) sprite_index=sprPlayerIdle
+        if (fixspr) {if(djump=1) sprite_index=sprMintyFall
+         else sprite_index=sprMintyFall2}
         else sprite_index=sprPlayerIdleOld
         image_speed=0.2
     }
@@ -76,6 +79,7 @@ if (argument0=="draw") {
 
         dy=floor(bowy+abs(lengthdir_y(2,drawangle))*vflip+(vflip==-1))
         if ((drawspr=sprPlayerIdle || drawspr=sprPlayerIdleOld) && floor(drawframe)==3) dy+=vflip //bobbing
+        if(fixspr=false) {
         switch(settings("bowclr")) {
         case 0:
         draw_sprite_ext(sprBow,3,floor(bowx),dy,xs,ys,drawangle,image_blend,image_alpha)
@@ -100,6 +104,7 @@ if (argument0=="draw") {
     break;
     default :
 
+        }
         }
     if (dot_hitbox) {
         draw_sprite(sprWhiteDot,0,floor(drawx),floor(drawy))

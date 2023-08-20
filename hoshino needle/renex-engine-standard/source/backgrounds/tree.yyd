@@ -40,6 +40,7 @@
 	|bgFire
 |background30_block
 |background31_bg
+|background173
 |background32_bg
 |background33_block
 |background34_cookie
@@ -106,6 +107,7 @@
 |background105
 |background106_block
 |background107_miniblock
+|background172_title
 |background108_bg
 |background109
 |background110
@@ -161,4 +163,3 @@
 |background168_Answer_to_Life
 |background170
 |background171
-|background172_title
