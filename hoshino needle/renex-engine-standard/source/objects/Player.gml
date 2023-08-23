@@ -6,7 +6,7 @@ applies_to=self
 */
 ///player properties
 // alternative physics from yoyo1.4
-experimental=0
+experimental=settings("experiment")
 // debug
 hoshi=0
 //jump vspeed values, and number of jumps
@@ -491,14 +491,16 @@ if (!vvvvvv) if (true || !onPlatform) {
         //eat djump when maker vines is disabled
         if (key_pressed[key_jump] && !global.maker_vines) {
             if (onPlatform) {
-          //    djump=1
-           //   walljump=2
-             // hoshi+=1
+            if(djump>1) {
+          djump=1
+
+             hoshi+=1
+             }
            }
            else
             if (djump<maxjumps) {
                 djump+=1
-                walljump=-2
+                sound_play_slomo("sndDJump")
             }
         }
     }
