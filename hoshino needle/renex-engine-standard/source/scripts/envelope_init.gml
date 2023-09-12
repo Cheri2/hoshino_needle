@@ -2,7 +2,8 @@
 //version 4
 //renex 2021
 //depends on: gm82core v1.4+
-
+full=settings("fullscreen")
+exfc=settings("exfc")
 globalvar application_surface,dequanto_surface;
 application_surface=noone
 dequanto_surface=noone
@@ -45,7 +46,33 @@ object_set_persistent(o,1)
 object_set_parent(o,ActiveParent)
 object_set_depth(o,-10000001)
 instance_create(0,0,o)
+if(!exfc || !full) {    if(floor(display_get_height()*800/608)<display_get_width()) {
+                _target_width = floor(display_get_height()*800/608);
+    _target_height = floor(display_get_height());
 
+    }
+    else {
+                _target_width = floor(display_get_width());
+    _target_height = floor(display_get_width()/800/608);
+
+    }
+    global._width_diff=display_get_width()-_target_width
+    global._height_diff=display_get_height()-_target_height}
+else {
+    if(floor(display_get_height()*800/608)<display_get_width()) {
+                _target_width = floor(display_get_height()*800/608);
+    _target_height = floor(display_get_height());
+
+    }
+    else {
+                _target_width = floor(display_get_width());
+    _target_height = floor(display_get_width()/800/608);
+
+    }
+    global._width_diff=display_get_width()-_target_width
+    global._height_diff=display_get_height()-_target_height
+    window_resize_buffer(display_get_width(),display_get_height())
+}
 global.screen_manager=o
 
 instance_create(0,0,BackgroundDaemon)

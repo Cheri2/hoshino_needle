@@ -215,6 +215,7 @@
 	|opt_animation
 	|opt_potato
 	|opt_experimental
+	|opt_exfc
 	|opt_screenshake
 	|opt_savevalign
 	|opt_platformtype

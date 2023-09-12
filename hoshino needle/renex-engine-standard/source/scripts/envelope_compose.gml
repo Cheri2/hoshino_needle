@@ -30,17 +30,23 @@ if ((global.rw!=global.APPwidth || global.rh!=global.APPheight) && settings("fil
     surface_reset_target()
     d3d_set_projection_ortho(0,0,global.rw,global.rh,0)
     texture_set_interpolation(1)
-    draw_surface_stretched(dequanto_surface,0,0,global.rw,global.rh)
+    if(!settings("exfc")||!settings("fullscreen")) {draw_surface_stretched(dequanto_surface,0,0,global.rw,global.rh)}
+    else {
+    draw_surface_stretched(dequanto_surface, (global._width_diff/2)/display_get_width()*global.rw,(global._height_diff/2)/display_get_height()*global.rh,(display_get_width()-global._width_diff)/display_get_width()*global.rw,(display_get_height()-global._height_diff)/display_get_height()*global.rh)
     texture_set_interpolation(0)
-} else {
+}
+}else {
     //nearest neighbor filtering
     surface_reset_target()
     d3d_set_projection_ortho(0,0,global.rw,global.rh,0)
     texture_set_interpolation(settings("filter") && global.APPfilter && hastofilter)
-    draw_surface_stretched(application_surface,0,0,global.rw,global.rh)
+    if(!settings("exfc")||!settings("fullscreen")) {draw_surface_stretched(application_surface,0,0,global.rw,global.rh)}
+    else {
+    draw_surface_stretched(application_surface, (global._width_diff/2)/display_get_width()*global.rw,(global._height_diff/2)/display_get_height()*global.rh,(display_get_width()-global._width_diff)/display_get_width()*global.rw,(display_get_height()-global._height_diff)/display_get_height()*global.rh)
+    }
     texture_set_interpolation(0)
 }
-
+/*
 if (maxalpha>0) {
     //draw engine fullscreen button
     texture_set_interpolation(1)
@@ -64,4 +70,4 @@ if (maxalpha>0) {
         draw_text_1color(mousex-w+2,mousey+20+2,str,0,1)
         draw_set_alpha(1)
     }
-}
+}*/
