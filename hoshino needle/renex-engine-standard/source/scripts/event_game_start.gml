@@ -9,13 +9,7 @@ if (order_test==2) {
     exit
 }
 
-if (__gm82core_version<151) {
-    show_error(
-        "Please update your Game Maker 8.2 Core extension to 1.5.1 or newer.",
-        true
-    )
-    exit
-}
+
 
 if (!directory_exists("data")) {
     set_working_directory(directory_previous(working_directory))
