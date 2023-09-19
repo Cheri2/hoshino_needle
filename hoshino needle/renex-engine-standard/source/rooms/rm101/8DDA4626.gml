@@ -1,4 +1,4 @@
 //gm82 fields begin
-fruit=sprCherryWhite
-blend=$93DFFF
+type="clone"
+grid=8
 //gm82 fields end

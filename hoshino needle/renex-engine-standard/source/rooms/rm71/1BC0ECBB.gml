@@ -1,4 +1,4 @@
 //gm82 fields begin
-type="clone"
-grid=16
+BGM="stageo"
+loop=true
 //gm82 fields end

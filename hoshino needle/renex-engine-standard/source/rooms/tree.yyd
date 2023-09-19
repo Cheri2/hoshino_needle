@@ -103,12 +103,4 @@
 	|rm97
 	|rm100
 	|rmAsEnd100
-+Bside
 	|rm101
-	|rm102
-	|rm103
-	|rm104
-	|rm105
-	|rm106
-	+Tools
-		|rmCreateSoundPackTool

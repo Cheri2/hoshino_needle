@@ -1,4 +1,3 @@
 //gm82 fields begin
-BGM="stage2"
-loop=true
+type="clone"
 //gm82 fields end

@@ -1,4 +1,4 @@
 //gm82 fields begin
-text="4A0D"
-font=fntFileBig
+BGM="stageo"
+loop=true
 //gm82 fields end

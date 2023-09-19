@@ -8,14 +8,14 @@ switch (argument0) {
         if (global.key_pressed[key_jump] || global.key_pressed[key_left] || global.key_pressed[key_right]) {
             //option ticked/changed
             sound_play_option("sndDJump")
-            settings("pform",!settings("pform"))
+            settings("pform",(settings("pform")+1) mod 3)
         }
     }break
     case opt_text: {
         return "Platforms"
     }break
     case opt_value: {
-        return pick(settings("pform"),"Snapless","Classic (BAD!)")
+        return pick(settings("pform"),"Semi Snapless","Classic (BAD!)","Full Snapless")
     }break
     case opt_end:{
     }break

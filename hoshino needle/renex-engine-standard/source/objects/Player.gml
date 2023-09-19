@@ -954,11 +954,12 @@ if (!dead) {
         if (instance_place(x,y,other.id)) y-=1
         ytop=bbox_bottom+1
         y=oy
-
+ fuck=-1
         if (y-vspeed/2+checkOffset<=ytop) {
             //check for platform snap
-            if (other.snap || vspeed-other.vspeed>=0) {
+            if ((other.snap || vspeed-other.vspeed>=0)&&(settings("pform")!=2||ytop>=bbox_bottom-vspeed)) {
                 y=ytop-platformOffset
+                fuck=1
                 if (!place_free(x,y)) {
                     //crushed!
                     if (other.vspeed<0) {
@@ -971,11 +972,14 @@ if (!dead) {
                     player_land(1)
                     with (other) event_trigger(tr_platland)   
                 }
+           
             }
+            else fuck=0
             vsplatform=max(0,other.vspeed)
             walljumpboost=0
         }
     } else {
+    
         //upside down platforms
         
         //find bottom of the platform using a binary search
@@ -991,7 +995,7 @@ if (!dead) {
         y=oy
 
         if (y-vspeed/2+checkOffset>=ytop) {
-            if (other.snap || vspeed-other.vspeed<=0) {
+            if ((other.snap || vspeed-other.vspeed<=0)&&(settings("pform")!=2||ytop<=bbox_bottom-vspeed)) {
                 //check for platform snap
                 y=ytop+platformOffset
                 if (!place_free(x,y)) {
