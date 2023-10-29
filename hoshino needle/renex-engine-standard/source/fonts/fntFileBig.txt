@@ -1,4 +1,4 @@
-name=Times New Roman
+name=Terminal
 size=24
 bold=1
 italic=0

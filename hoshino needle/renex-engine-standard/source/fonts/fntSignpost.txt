@@ -1,4 +1,4 @@
-name=Arial
+name=Terminal
 size=13
 bold=1
 italic=0

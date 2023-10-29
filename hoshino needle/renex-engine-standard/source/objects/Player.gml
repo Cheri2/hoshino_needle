@@ -954,12 +954,15 @@ if (!dead) {
         if (instance_place(x,y,other.id)) y-=1
         ytop=bbox_bottom+1
         y=oy
- fuck=-1
-        if (y-vspeed/2+checkOffset<=ytop) {
-            //check for platform snap
-            if ((other.snap || vspeed-other.vspeed>=0)&&(settings("pform")!=2||ytop>=bbox_bottom-vspeed)) {
+        
+        //change snap type for CustomSnap platforms
+        var snap_var;
+        snap_var=settings("pform")
+        
+        //check platform snap type
+        if (check_plat_snap(1,snap_var)) {
+            if (snap_var==1 || vspeed-other.vspeed>=0) {
                 y=ytop-platformOffset
-                fuck=1
                 if (!place_free(x,y)) {
                     //crushed!
                     if (other.vspeed<0) {
@@ -972,14 +975,11 @@ if (!dead) {
                     player_land(1)
                     with (other) event_trigger(tr_platland)   
                 }
-           
             }
-            else fuck=0
             vsplatform=max(0,other.vspeed)
             walljumpboost=0
         }
     } else {
-    
         //upside down platforms
         
         //find bottom of the platform using a binary search
@@ -993,10 +993,15 @@ if (!dead) {
         if (instance_place(x,y,other.id)) y+=1
         ytop=bbox_top
         y=oy
-
-        if (y-vspeed/2+checkOffset>=ytop) {
-            if ((other.snap || vspeed-other.vspeed<=0)&&(settings("pform")!=2||ytop<=bbox_bottom-vspeed)) {
-                //check for platform snap
+        
+        //change snap type for CustomSnap platforms
+        var snap_var;
+        if (other.object_index==CustomSnap) snap_var=other.snap_type
+        else snap_var=global.platform_snap_type
+        
+        //check platform snap type
+        if (check_plat_snap(-1,snap_var)) {
+            if (snap_var!=0 || (snap_var!=2) || vspeed-other.vspeed<=0) {
                 y=ytop+platformOffset
                 if (!place_free(x,y)) {
                     //crushed!

@@ -1,4 +1,4 @@
-name=Segoe UI Semilight
+name=Terminal
 size=9
 bold=0
 italic=0
